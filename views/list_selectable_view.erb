@@ -17,6 +17,7 @@
   <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 
 
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.8/zepto.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   <script type="text/javascript" src="/javascripts/lib/iScroll.js"></script>
@@ -35,7 +36,7 @@
                       " <a >" +
                       "<div class='title'>Homer J Simpson " + i + "</div>" +
                       "<div class='subtext'>Springfield, USA</div>" +
-                      /*"<span class='row-count'>5</span>" +*/
+                      "<span class='row-count'>5</span>" +
                       "</a>" +
                       "</li>");
           }
@@ -52,6 +53,24 @@
           contactList.on("updated", function () {
               //console.log('update fired');
               iScrollers[0].instance.refresh();
+          });
+
+
+
+          //Select Row by Swiping
+          Zepto('#contact-list li').live('swipeLeft', function () {
+
+              var checked = Zepto(this).attr("selected");
+
+              if (checked == "true") {
+                  Zepto(this).attr("selected", "false");
+                  Zepto(this).removeClass('selectedRow');
+              } else {
+                  Zepto(this).attr("selected", "true");
+                  Zepto(this).addClass('selectedRow');
+              }
+
+              console.log(Zepto(this));
           });
 
       });

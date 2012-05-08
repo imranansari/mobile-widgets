@@ -15,4 +15,8 @@ class API < Sinatra::Base
     erb :list_view
   end
 
+  get '/list_selectable' do
+    erb :list_selectable_view
+  end
+
 end
