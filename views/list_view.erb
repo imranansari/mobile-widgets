@@ -29,6 +29,16 @@
   <script language="javascript">
       $(document).ready(function () {
 
+          for (var i = 0; i < 200; i++) {
+              $("#contact-list").append("<li>" +
+                      " <a >" +
+                      "<div class='title'>Home J Simpson " + i + "</div>" +
+                      "<div class='subtext'>Springfield, USA</div>" +
+                  //"<span class='row-count'>5</span>" +
+                      "</a>" +
+                      "</li>");
+          }
+
           $(".scolling_list_wrapper").jScroll({forceIscroll:true});
       });
 
@@ -39,78 +49,8 @@
 
 <div class='scolling_list_wrapper'>
   <div class="scroller">
-    <ul id="spots-list" class="table-view table-action">
-                <li>
-                  <a href="spot.html">
-                    <h2>Planet Hollywood</h2>
-                    <span class="relative-distance">233m away</span>
-                    <span class="sightings">3</span>
-                  </a>
-                </li>
-                <li class="even">
-                  <a href="spot.html">
-                    <h2>Myles&rsquo; House</h2>
-                    <span class="relative-distance">506m away</span>
-                    <span class="sightings">5</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="spot.html">
-                    <h2>Edgar&rsquo;s Inn</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-                <li class="even">
-                  <a href="spot.html">
-                    <h2>Hard Rock Caf&eacute;</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="spot.html">
-                    <h2>Planet Hollywood sideshow has a long name</h2>
-                    <span class="relative-distance">233m away</span>
-                    <span class="sightings">3</span>
-                  </a>
-                </li>
-                <li class="even">
-                  <a href="spot.html">
-                    <h2>Myles&rsquo; House</h2>
-                    <span class="relative-distance">506m away</span>
-                    <span class="sightings">5</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="spot.html">
-                    <h2>Edgar&rsquo;s Inn</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-                <li class="even">
-                  <a href="spot.html">
-                    <h2>Hard Rock Caf&eacute;</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="spot.html">
-                    <h2>Edgar&rsquo;s Inn</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-                <li class="even">
-                  <a href="spot.html">
-                    <h2>Hard Rock Caf&eacute;</h2>
-                    <span class="relative-distance">1.2km away</span>
-                    <span class="sightings">15</span>
-                  </a>
-                </li>
-              </ul><!-- #spots-list -->
+    <ul id="contact-list" class="list-view list-action"></ul>
+
   </div>
 </div>
 
