@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+  <title>Swipe slider Widget</title>
+
+  <link href="sass_css/widgets.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+
+  <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src='/javascripts/swipe.min.js'></script>
+
+  <script language="javascript">
+      $(document).ready(function () {
+          new Swipe($('#info-slider').get(0));
+      });
+
+  </script>
+</head>
+
+<body>
+
+<div class="mainContent">
+  <div id='info-slider' class='swipe'>
+    <ul>
+      <li style='display:block'>
+        <div>
+          panel 1
+        </div>
+      </li>
+      <li style='display:none'>
+        <div>panel 2</div>
+      </li>
+      <li style='display:none'>
+        <div>panel 3</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>​

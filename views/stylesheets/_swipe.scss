@@ -1,0 +1,12 @@
+#info-slider div, ul, li {
+  margin: 0 !important;
+}
+
+.swipe {
+  padding-bottom: 20px !important;
+}
+
+.swipe li div, .swipe div div div {
+  background: yellow !important;
+  min-height: 300px !important;
+}
