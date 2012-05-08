@@ -29,17 +29,31 @@
   <script language="javascript">
       $(document).ready(function () {
 
+          //Create Dummy Data List
           for (var i = 0; i < 200; i++) {
               $("#contact-list").append("<li>" +
                       " <a >" +
-                      "<div class='title'>Home J Simpson " + i + "</div>" +
+                      "<div class='title'>Homer J Simpson " + i + "</div>" +
                       "<div class='subtext'>Springfield, USA</div>" +
                   //"<span class='row-count'>5</span>" +
                       "</a>" +
                       "</li>");
           }
 
+          //iScroll it
           $(".scolling_list_wrapper").jScroll({forceIscroll:true});
+
+
+          //Filter it using list.js
+          var options = {valueNames:['title']};
+          var contactList = new List($(".scroller").get(0), options);
+
+          //On Filter update we have to refresh iScroll because the data has changed
+          contactList.on("updated", function () {
+              //console.log('update fired');
+              iScrollers[0].instance.refresh();
+          });
+
       });
 
   </script>
@@ -49,7 +63,10 @@
 
 <div class='scolling_list_wrapper'>
   <div class="scroller">
-    <ul id="contact-list" class="list-view list-action"></ul>
+    <div class="search">
+      <input type="search" class="searchInput" placeholder="Filter Contacts">
+    </div>
+    <ul id="contact-list" class="list-view list-action list"></ul>
 
   </div>
 </div>

@@ -24,6 +24,21 @@
     }
 
   }
+
+  .search {
+
+    .searchInput {
+      position: relative;
+      right: 2%;
+      left: 2%;
+      min-height: 25px;
+      width: 94%;
+    }
+    background-color: #f8f8ff;
+
+
+
+  }
 }
 
 .list-view {
@@ -53,7 +68,6 @@
     position: relative;
     text-decoration: none;
   }
-
 
   a:after {
     clip: rect(0 201px 20px 192px);
