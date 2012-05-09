@@ -23,4 +23,8 @@ class API < Sinatra::Base
     erb :fixed_header_view
   end
 
+  get '/responsive_header' do
+    erb :responsive_header_view
+  end
+
 end

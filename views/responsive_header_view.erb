@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+  <title>List Widget</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css" charset="utf-8"/>
+
+  <link href="sass_css/widgets.css" rel="stylesheet" type="text/css">
+
+
+  <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.8/zepto.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="/javascripts/lib/iScroll.js"></script>
+  <script type="text/javascript" src="/javascripts/lib/jScroll.js"></script>
+
+
+  <script type="text/javascript" src="/javascripts/lib/list.min.js"></script>
+  <script type="text/javascript" src="/javascripts/lib/fn.animate-css.js"></script>
+
+  <script language="javascript">
+      $(document).ready(function () {
+
+          //Create Dummy Data List
+          for (var i = 0; i < 200; i++) {
+              $("#contact-list").append("<li>" +
+                      " <a >" +
+                      "<div class='title'>Homer J Simpson " + i + "</div>" +
+                      "<div class='subtext'>Springfield, USA</div>" +
+                      "</a>" +
+                      "</li>");
+          }
+
+          //iScroll it
+          $(".scolling_list_wrapper").jScroll({forceIscroll:true});
+
+      });
+
+  </script>
+</head>
+
+<body>
+
+<header role="banner">
+  <div>
+    <h1 class="logo"><a href="#"><img src="images/logo_new.png" alt="Ffly"/></a></h1>
+    <ul id="nav-anchors" class="nav-anchors">
+      <li><a href="#nav" id="menu-anchor">Menu</a></li>
+      <li><a href="#search" id="search-anchor">Search</a></li>
+    </ul>
+    <form id="search" action="#" method="post" class="search reveal">
+      <fieldset>
+        <legend>Search the Site</legend>
+        <label for="search-site">Search the site</label>
+        <input type="search" id="search-site" placeholder="Search Store"/>
+        <input type="submit" value="Search"/>
+      </fieldset>
+    </form>
+    <nav id="nav" class="nav reveal">
+      <ul role="navigation">
+        <li><a href="#">T-shirts</a></li>
+        <li><a href="#">Hoodies</a></li>
+        <li><a href="#">Pants</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--end .header-->
+
+<div class='scolling_list_wrapper'>
+  <div class="scroller">
+    <div class="search">
+      <input type="search" class="searchInput" placeholder="Filter Contacts">
+    </div>
+    <ul id="contact-list" class="list-view list-action list"></ul>
+
+  </div>
+</div>
+
+</body>
+</html>​
