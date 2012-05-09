@@ -19,4 +19,8 @@ class API < Sinatra::Base
     erb :list_selectable_view
   end
 
+  get '/fixed_header' do
+    erb :fixed_header_view
+  end
+
 end

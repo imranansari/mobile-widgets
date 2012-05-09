@@ -1,11 +1,10 @@
 header {
   position: relative;
-//z-index: 2;
-//top: 10px;
+  top: 0px;
   //padding-top: 10px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 35px;
 
 //font-size: 20px;
  text-align: center;
@@ -43,4 +42,14 @@ header .appBar {
 
 .header .appLogo {
 
+}
+
+.scolling_list_wrapper {
+  position: absolute !important;
+  z-index: 1;
+  top: 36px !important;;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  overflow: auto;
 }

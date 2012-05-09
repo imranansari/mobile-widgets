@@ -17,6 +17,7 @@
   <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 
 
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.8/zepto.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
   <script type="text/javascript" src="/javascripts/lib/iScroll.js"></script>
@@ -25,9 +26,6 @@
 
   <script type="text/javascript" src="/javascripts/lib/list.min.js"></script>
   <script type="text/javascript" src="/javascripts/lib/fn.animate-css.js"></script>
-
-  <!-- Hack to enable CSS active pseudo styles -->
-  <script type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
 
   <script language="javascript">
       $(document).ready(function () {
@@ -38,7 +36,6 @@
                       " <a >" +
                       "<div class='title'>Homer J Simpson " + i + "</div>" +
                       "<div class='subtext'>Springfield, USA</div>" +
-                      /*"<span class='row-count'>5</span>" +*/
                       "</a>" +
                       "</li>");
           }
@@ -46,23 +43,19 @@
           //iScroll it
           $(".scolling_list_wrapper").jScroll({forceIscroll:true});
 
-
-          //Filter it using list.js
-          var options = {valueNames:['title']};
-          var contactList = new List($(".scroller").get(0), options);
-
-          //On Filter update we have to refresh iScroll because the data has changed
-          contactList.on("updated", function () {
-              //console.log('update fired');
-              iScrollers[0].instance.refresh();
-          });
-
       });
 
   </script>
 </head>
 
 <body>
+
+<header>
+  <span class="appBar">
+    <span class="appLogo"><img src="/images/linc.jpg"></span>
+    <span class="appTitle">Lincoln Financial Group</span>
+  </span>
+</header>
 
 <div class='scolling_list_wrapper'>
   <div class="scroller">

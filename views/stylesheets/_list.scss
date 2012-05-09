@@ -26,7 +26,6 @@
   }
 
   .search {
-
     .searchInput {
       position: relative;
       right: 2%;
@@ -35,9 +34,6 @@
       width: 94%;
     }
     background-color: #f8f8ff;
-
-
-
   }
 }
 
@@ -67,6 +63,10 @@
     padding: 0.5em 0.785em 0.714em;
     position: relative;
     text-decoration: none;
+  }
+
+  a:active {
+  	background-color: #bc8f8f;
   }
 
   a:after {
@@ -100,6 +100,7 @@
 }
 
 .selectedRow{
-  background-color: blue;
+  background-color: #802420;
+  font-weight: bold;
 }
 
